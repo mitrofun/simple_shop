@@ -1,3 +1,6 @@
 Django==2.1.1
 pytz==2018.5
-Pillow-5.2.0
+Pillow==5.2.0
+sorl-thumbnail==12.5.0
+django-debug-toolbar==1.10.1
+sqlparse==0.2.4

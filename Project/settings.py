@@ -21,11 +21,13 @@ INSTALLED_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'sorl.thumbnail',
 ]
 
 LOCAL_APPS = [
     'apps.base',
-    'apps.category'
+    'apps.category',
+    'apps.cart'
 ]
 
 INSTALLED_APPS += THIRD_PARTY_APPS
@@ -41,12 +43,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
+
+INTERNAL_IPS = ['127.0.0.1']
+
 ROOT_URLCONF = 'Project.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [f'{BASE_DIR}/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +126,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_VERSION = str(uuid4())[:8]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SHOP_NAME = 'Simple shop'
+
+CART_SESSION_ID = 'cart'

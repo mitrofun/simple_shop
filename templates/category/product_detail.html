@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static thumbnail categories_tags app_tags %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+  <div class="col-lg-3">
+    <h1 class="my-4">{% shop_name %}</h1>
+    {% menu_categories product.category.slug %}
+  </div>
+
+  <div class="col-lg-9">
+    <div class="card mt-4">
+      {% thumbnail product.image "800x800" as im %}
+        <img class="card-img-top img-fluid" src="{{ im.url }}">
+      {% empty %}
+        <img class="card-img-top" src="{% static 'img/no-photo.png' %}">
+      {% endthumbnail %}
+      <div class="card-body">
+        <h3 class="card-title">{{ product.name }}</h3>
+        <h4>{{ product.price }} руб.</h4>
+        <p class="card-text">{{ product.description }}</p>
+        <hr/>
+        <form action="{% url 'cart:product-add' product.id %}" method="post" class="form-inline float-right">
+          {{ cart_product_form }}
+          {% csrf_token %}
+          <input type="submit" class="btn btn-success ml-1" value="Добавить в корзину">
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

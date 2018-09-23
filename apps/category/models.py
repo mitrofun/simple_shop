@@ -1,6 +1,10 @@
 from django.db import models
+from django.urls import reverse
+
+from sorl.thumbnail import ImageField
 
 from apps.base import mixins
+from . import menagers
 
 
 class Category(mixins.NameSlugMixin):
@@ -14,6 +18,9 @@ class Category(mixins.NameSlugMixin):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category:category-detail', args=(self.slug,))
+
 
 class Product(mixins.NameSlugMixin, mixins.UpdateCreateMixin):
     category = models.ForeignKey(
@@ -22,7 +29,7 @@ class Product(mixins.NameSlugMixin, mixins.UpdateCreateMixin):
         verbose_name="Категория",
         on_delete=models.CASCADE
     )
-    image = models.ImageField(
+    image = ImageField(
         upload_to='products/%Y/%m/%d/',
         blank=True,
         verbose_name="Изображение товара"
@@ -32,6 +39,9 @@ class Product(mixins.NameSlugMixin, mixins.UpdateCreateMixin):
     stock = models.PositiveIntegerField(verbose_name="На складе")
     available = models.BooleanField(default=True, verbose_name="Доступен")
 
+    objects = models.Manager()
+    available_objects = menagers.ProductManager()
+
     class Meta:
         db_table = 'products'
         ordering = ('name',)
@@ -40,3 +50,6 @@ class Product(mixins.NameSlugMixin, mixins.UpdateCreateMixin):
         ]
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+    def get_absolute_url(self):
+        return reverse('category:product-detail', args=(self.slug,))

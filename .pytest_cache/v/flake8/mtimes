@@ -1,0 +1,205 @@
+{
+  "/Users/mitri4/Projects/SimpleShop/Project/__init__.py": [
+    1537634831.1188443,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/production_settings.py": [
+    1537640669.7196712,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/settings.py": [
+    1537715734.99685,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/settings_qa.py": [
+    1537635141.211958,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/urls.py": [
+    1537732188.2654085,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/wsgi.py": [
+    1537641269.6108615,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/__init__.py": [
+    1537641265.9304433,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/__init__.py": [
+    1537641435.3079731,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/apps.py": [
+    1537684586.6955962,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/mixins.py": [
+    1537642429.928929,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/templatetags/__init__.py": [
+    1537705216.3546596,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/templatetags/app_tags.py": [
+    1537714707.8960452,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/views.py": [
+    1537684586.6983502,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/__init__.py": [
+    1537715734.9937253,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/apps.py": [
+    1537715734.991172,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/cart.py": [
+    1537717828.7985241,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/forms.py": [
+    1537732228.2654145,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/urls.py": [
+    1537738453.3931043,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/views.py": [
+    1537738453.3960247,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/__init__.py": [
+    1537642766.2852335,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/admin.py": [
+    1537642679.2556696,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/apps.py": [
+    1537642754.2634628,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/menagers.py": [
+    1537697610.271344,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/models.py": [
+    1537701556.8177,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/templatetags/__init__.py": [
+    1537704620.8726664,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/templatetags/categories_tags.py": [
+    1537704973.347745,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/urls.py": [
+    1537700882.293262,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/views.py": [
+    1537721221.9280221,
+    [
+      "E731",
+      "F405"
+    ]
+  ],
+  "/Users/mitri4/Projects/SimpleShop/manage.py": [
+    1537634831.1182358,
+    [
+      "E731",
+      "F405"
+    ]
+  ]
+}

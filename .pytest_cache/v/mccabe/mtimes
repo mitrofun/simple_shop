@@ -1,0 +1,138 @@
+{
+  "/Users/mitri4/Projects/SimpleShop/Project/__init__.py": [
+    1537634831.1188443,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/production_settings.py": [
+    1537640669.7196712,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/settings.py": [
+    1537715734.99685,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/settings_qa.py": [
+    1537635141.211958,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/urls.py": [
+    1537732188.2654085,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/Project/wsgi.py": [
+    1537641269.6108615,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/__init__.py": [
+    1537641265.9304433,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/__init__.py": [
+    1537641435.3079731,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/apps.py": [
+    1537684586.6955962,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/migrations/__init__.py": [
+    1537641435.3130012,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/mixins.py": [
+    1537642429.928929,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/templatetags/__init__.py": [
+    1537705216.3546596,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/templatetags/app_tags.py": [
+    1537714707.8960452,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/base/views.py": [
+    1537684586.6983502,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/__init__.py": [
+    1537715734.9937253,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/apps.py": [
+    1537715734.991172,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/cart.py": [
+    1537717828.7985241,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/forms.py": [
+    1537732228.2654145,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/migrations/__init__.py": [
+    1537715641.3676858,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/urls.py": [
+    1537738453.3931043,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/cart/views.py": [
+    1537738453.3960247,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/__init__.py": [
+    1537642766.2852335,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/admin.py": [
+    1537642679.2556696,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/apps.py": [
+    1537642754.2634628,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/menagers.py": [
+    1537697610.271344,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/migrations/0001_initial.py": [
+    1537642508.2148547,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/migrations/0002_auto_20180923_1119.py": [
+    1537701580.1131387,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/migrations/__init__.py": [
+    1537641347.7845328,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/models.py": [
+    1537701556.8177,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/templatetags/__init__.py": [
+    1537704620.8726664,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/templatetags/categories_tags.py": [
+    1537704973.347745,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/urls.py": [
+    1537700882.293262,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/apps/category/views.py": [
+    1537721221.9280221,
+    15
+  ],
+  "/Users/mitri4/Projects/SimpleShop/manage.py": [
+    1537634831.1182358,
+    15
+  ]
+}

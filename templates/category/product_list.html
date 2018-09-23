@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static thumbnail categories_tags app_tags %}
+
+{% block title %}{% page_title active_category %}{% endblock %}
+
+{% block content %}
+
+  <div class="col-lg-3">
+    <h1 class="my-4">{% shop_name %}</h1>
+    {% menu_categories active_category %}
+  </div>
+
+  <div class="col-lg-9">
+    <div class="row my-4">
+      {% for product in products %}
+        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <a href="{{ product.get_absolute_url }}">
+            {% thumbnail product.image "700x400" as im %}
+              <img class="card-img-top" src="{{ im.url }}">
+            {% empty %}
+              <img class="card-img-top" src="{% static 'img/no-photo.png' %}">
+            {% endthumbnail %}
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+            </h4>
+            <h5>{{ product.price }} руб.</h5>
+            <p class="card-text">{{ product.description | truncatechars:62 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
