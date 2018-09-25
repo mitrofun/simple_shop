@@ -1,11 +1,19 @@
-#Simple shop
+Simple shop
+=====
 Example of a store with a catalog and shopping car
-#Installation
+
+Installation
+====
 ```bash
 git clone https://github.com/mitrofun/simple_shop.git
 ```
-#Run local
-##Local
+
+Run local
+====
+
+Local
+---
+
 ###Install requirements for backend
 ```bash
 cd simple_shop
@@ -59,14 +67,16 @@ To load fixtures, use the following commands
 mkdir -p media/products && cp -rf fixtures/products media
 python3 manage.py loaddata fixtures/category.json
 ```
-##Quick run
+Quick run
+----
 The project has a quick start script that does all the operations described above.
 To run it, run the following command
 ```bash
 ./quick_start.sh
 ```
 
-#Run in docker
+Run in docker
+====
 ```bash
 docker-compose up --build
 ```
@@ -78,15 +88,18 @@ Requirements
 - see all requirements in [base.txt](https://github.com/mitrofun/simple_shop/blob/master/requirements/base.txt)
 
 
-#Tests
+Tests
+====
 For run test use the following commands
 ```bash
 pip3 install -r requirements/dev.txt
 pytest
 ```
 
-#Contributors
+Contributors
+====
 - [mitri4](https://github.com/mitrofun)
 
-#License
+License
+=====
 simple_shop is released under the MIT License. See the LICENSE file for more details.
