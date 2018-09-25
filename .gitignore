@@ -9,3 +9,4 @@ collected_static/
 /media/
 /.pytest_cache/
 /node_modules/
+/data/
