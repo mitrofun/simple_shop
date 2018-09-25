@@ -67,8 +67,8 @@ To load fixtures, use the following commands
 mkdir -p media/products && cp -rf fixtures/products media
 python3 manage.py loaddata fixtures/category.json
 ```
-Quick run
-----
+
+### Quick run
 The project has a quick start script that does all the operations described above.
 To run it, run the following command
 ```bash
