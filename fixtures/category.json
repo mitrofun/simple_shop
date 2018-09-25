@@ -1,0 +1,74 @@
+[
+{
+  "model": "category.category",
+  "pk": 1,
+  "fields": {
+    "name": "\u041a\u0443\u0440\u0442\u043a\u0438",
+    "slug": "kurtki"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 2,
+  "fields": {
+    "name": "\u0428\u0442\u0430\u043d\u044b",
+    "slug": "shtany"
+  }
+},
+{
+  "model": "category.category",
+  "pk": 3,
+  "fields": {
+    "name": "\u0428\u0430\u043f\u043a\u0438",
+    "slug": "shapki"
+  }
+},
+{
+  "model": "category.product",
+  "pk": 1,
+  "fields": {
+    "name": "\u0412\u0435\u0442\u0440\u043e\u0432\u043a\u0430",
+    "slug": "vetrovka",
+    "created": "2018-09-22T20:22:57.078Z",
+    "updated": "2018-09-23T11:23:30.353Z",
+    "category": 1,
+    "image": "products/2018/09/23/p1.jpg",
+    "description": "\u041b\u0435\u0433\u043a\u0430\u044f \u043c\u0443\u0436\u0441\u043a\u0430\u044f \u0432\u0435\u0442\u0440\u043e\u0432\u043a\u0430 \u043f\u043e\u0434\u043e\u0439\u0434\u0435\u0442 \u0434\u043b\u044f \u043a\u043e\u043c\u0444\u043e\u0440\u0442\u0430 \u0438 \u0443\u0434\u043e\u0431\u0441\u0442\u0432\u0430 \u0432 \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u044f\u0445",
+    "price": "10000.00",
+    "stock": 2,
+    "available": true
+  }
+},
+{
+  "model": "category.product",
+  "pk": 2,
+  "fields": {
+    "name": "\u0411\u0440\u044e\u043a\u0438",
+    "slug": "bryuki",
+    "created": "2018-09-23T10:58:56.786Z",
+    "updated": "2018-09-23T11:28:30.602Z",
+    "category": 2,
+    "image": "products/2018/09/23/p2.jpg",
+    "description": "\u0421\u0443\u043f\u0435\u0440 \u0431\u0440\u044e\u043a\u0438 \u0434\u043b\u044f \u0442\u0443\u0440\u0438\u0437\u043c\u0430",
+    "price": "3000.00",
+    "stock": 10,
+    "available": true
+  }
+},
+{
+  "model": "category.product",
+  "pk": 3,
+  "fields": {
+    "name": "\u0411\u0435\u0439\u0441\u0431\u043e\u043b\u043a\u0430",
+    "slug": "bejsbolka",
+    "created": "2018-09-23T12:00:17.727Z",
+    "updated": "2018-09-23T12:00:17.727Z",
+    "category": 3,
+    "image": "products/2018/09/23/p3.jpg",
+    "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0431\u0435\u0439\u0441\u0431\u043e\u043b\u043a\u0438 \u0434\u043b\u0438\u043d\u043d\u043e\u0435",
+    "price": "1500.00",
+    "stock": 3,
+    "available": true
+  }
+}
+]

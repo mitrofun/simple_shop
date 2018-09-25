@@ -30,6 +30,9 @@ qa:
 user:
 	python3 manage.py createdefaultuser
 
+# target: loaddata - Load reference data
+loaddata:
+	python3 manage.py loaddata fixtures/category.json
 
 # target: docker-build - Build docker image with tag simpleshop
 docker-build:
