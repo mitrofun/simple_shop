@@ -8,18 +8,18 @@ Installation
 git clone https://github.com/mitrofun/simple_shop.git
 ```
 
-Run local
+Run
 ====
 
-Local
+Local develop
 ---
 
-###Install requirements for backend
+### Install requirements for backend
 ```bash
 cd simple_shop
 pip3 install -r requirements.txt
 ```
-###Install requirements for frontend
+### Install requirements for frontend
 **WARNING** to run the application locally, you must install it on 
 your system `yarn` and `gulp` and after run command for download
  library for frontend
@@ -37,7 +37,7 @@ export DATABASE_URL='sqlite:////full/path/to/your/database/file.sqlite'
 For more information on how to set up a database connection, 
 see [here](https://github.com/kennethreitz/dj-database-url#url-schema)
 
-###Migration
+### Migration
 After roll migration
 ```bash
 python3 manage.py migrate
@@ -46,7 +46,7 @@ or use command
 ```bash
 make migrate
 ```
-###Create admin
+### Create admin
 Create administrator with username `admin` and password `admin` 
 ```bash
 python3 manage.py createdefaultuser
@@ -55,12 +55,12 @@ or use command
 ```bash
 make user
 ```
-###Run develop server
+### Run develop server
 After run develop server
 ```bash
 python3 manage.py runserver
 ```
-###Fixtures
+### Fixtures
 To demonstrate the project, it has fixtures with categories and products.
 To load fixtures, use the following commands
 ```bash
@@ -76,7 +76,7 @@ To run it, run the following command
 ```
 
 Run in docker
-====
+----
 ```bash
 docker-compose up --build
 ```
