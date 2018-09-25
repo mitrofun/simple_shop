@@ -1,0 +1,17 @@
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+.editorconfig
+.cache
+.pytest_cache
+env
+venv
+media
+__pycache__
+.python-version
+*.pyc
+*.pyo
+data
+db.sqlite3
+node_modules
