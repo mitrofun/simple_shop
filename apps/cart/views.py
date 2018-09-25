@@ -13,8 +13,13 @@ class CartDetail(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(CartDetail, self).get_context_data(**kwargs)
         cart = Cart(self.request)
-        context['cart'] = cart
         context['page_title'] = 'Корзина'
+        for item in cart:
+            item['update_quantity_form'] = forms.CartAddProductForm(
+                initial={
+                    'quantity': item['quantity'],
+                    'update': True
+                })
         return context
 
 
