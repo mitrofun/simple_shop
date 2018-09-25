@@ -1,4 +1,4 @@
-.PHONY: all help clean run qa user docker-build docker-run
+.PHONY: all help clean migrate run qa user docker-build docker-run
 
 # target: all - Default target. Does nothing.
 all:
@@ -17,6 +17,10 @@ clean:
 	find . -name '*.pyc' -exec rm -f {} \;
 	find . -name '.DS_Store' -exec rm -f {} \;
 	find . -name "__pycache__" -type d -exec rm -rf {} +
+
+# target: migrate - Run migration
+migrate:
+	python3 manage.py migrate
 
 # target: run - Run server
 run:
