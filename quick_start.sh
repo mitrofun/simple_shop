@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 echo 'Run script: quick start for local development'
+echo 'Install bootstrap'
+yarn install
+echo 'Copy vendor static files'
+gulp copy
+echo 'Copy media files'
+mkdir -p media/products && cp -rf fixtures/products media
 make migrate
-mkdir -p media/products && cp -rn fixtures/products media
 make loaddata
 make user
 make run

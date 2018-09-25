@@ -1,4 +1,4 @@
-.PHONY: all help clean migrate run qa user docker-build docker-run
+.PHONY: all help clean migrate run qa user line_code
 
 # target: all - Default target. Does nothing.
 all:
@@ -17,6 +17,14 @@ clean:
 	find . -name '*.pyc' -exec rm -f {} \;
 	find . -name '.DS_Store' -exec rm -f {} \;
 	find . -name "__pycache__" -type d -exec rm -rf {} +
+
+# target: line_code - counting lines of code
+line_code:
+	echo "### Counting lines of code within the project"
+	echo "# Python:" ; find . -name '*.py' -type f -exec cat {} + | wc -l
+	echo "# JavaScript:" ; find . -name '*.js' -type f -exec cat {} + | wc -l
+	echo "# HTML:" ; find . -name '*.html' -type f -exec cat {} + | wc -l
+	echo "# CSS:" ; find . -name '*.css' -type f -exec cat {} + | wc -l
 
 # target: migrate - Run migration
 migrate:
@@ -37,11 +45,3 @@ user:
 # target: loaddata - Load reference data
 loaddata:
 	python3 manage.py loaddata fixtures/category.json
-
-# target: docker-build - Build docker image with tag simpleshop
-docker-build:
-	docker build . -t simpleshop
-
-# target: docker-run - Run docker image with tag simpleshop
-docker-run:
-	docker run --name djshop -p 80:80 -d simpleshop
