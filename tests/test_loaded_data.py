@@ -7,5 +7,5 @@ def test_loaded_in_init_test():
     """
     Check loaded data has in test database
     """
-    assert models.Category.objects.all().count() > 0
-    assert models.Product.objects.all().count() > 0
+    assert models.Category.objects.count() > 0
+    assert models.Product.objects.count() > 0
