@@ -92,6 +92,7 @@ class Testing(BaseConfiguration):
     DEBUG = True
     EMAIL_DEBUG = True
     BaseConfiguration.TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
+    DATABASES = values.DatabaseURLValue('sqlite://:memory:')
     MEDIA_ROOT = os.path.join(BaseConfiguration.BASE_DIR, 'test_media')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     PASSWORD_HASHERS = ('django.contrib.auth.hashers.MD5PasswordHasher',)
