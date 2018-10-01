@@ -14,8 +14,8 @@ class SessionAdmin(admin.ModelAdmin):
         if 'cart' in data:
             result = ''
             for key, values in data['cart'].items():
-                prodict = Product.objects.get(pk=key)
-                result += f'<p><strong>{prodict.name}</strong> ' \
+                product = Product.objects.get(pk=key)
+                result += f'<p><strong>{product.name}</strong> ' \
                           f'по цене {values["price"]} руб.' \
                           f'кол-во: {values["quantity"]} шт.</p>'
             return mark_safe(f'<div>{result}</div>')
@@ -25,12 +25,12 @@ class SessionAdmin(admin.ModelAdmin):
     show_data_admin.allow_tags = True
 
     def has_change_permission(self, request, obj=None):
-        return False
+        return
 
     def has_delete_permission(self, request, obj=None):
-        return False
+        return
 
     def has_add_permission(self, request):
-        return False
+        return
 
     list_display = ['session_key', 'show_data_admin', 'expire_date', ]

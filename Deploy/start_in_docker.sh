@@ -3,7 +3,8 @@
 set -e
 set -u
 
-export DJANGO_SETTINGS_MODULE=Project.production_settings
+export DJANGO_SETTINGS_MODULE=Project.settings
+export DJANGO_CONFIGURATION=Production
 
 cd /opt/app
 yarn install

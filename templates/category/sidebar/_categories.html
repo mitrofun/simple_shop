@@ -1,5 +1,5 @@
 <div class="list-group">
-    <a href="{% url "category:product-list" %}" class="list-group-item {% if not active_category %}active{% endif %}">Все</a>
+    <a href="{% url 'category:product-list' %}" class="list-group-item {% if not active_category %}active{% endif %}">Все</a>
   {% for category in categories %}
     <a href="{{ category.get_absolute_url }}"
        class="list-group-item {% if active_category == category.slug %}active{% endif %}">{{ category.name }}</a>
