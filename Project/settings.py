@@ -45,7 +45,6 @@ class BaseConfiguration(Configuration):
     ]
     INSTALLED_APPS += THIRD_PARTY_APPS
     INSTALLED_APPS += LOCAL_APPS
-    INTERNAL_IPS = ['127.0.0.1']
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,6 +81,7 @@ class BaseConfiguration(Configuration):
 class Develop(BaseConfiguration):
     DEBUG = True
     TEMPLATE_DEBUG = True
+    INTERNAL_IPS = ('127.0.0.1',)
     BaseConfiguration.INSTALLED_APPS += ['debug_toolbar']
     BaseConfiguration.MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
     DATABASES = values.DatabaseURLValue('sqlite:///db.sqlite3')

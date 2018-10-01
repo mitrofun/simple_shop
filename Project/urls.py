@@ -1,7 +1,15 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include
+
+from apps.base import views
+
+handler400 = 'core.views.bad_request'
+handler403 = 'core.views.permission_denied'
+handler404 = 'core.views.page_not_found'
+handler500 = 'core.views.server_error'
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,7 +20,13 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+    urlpatterns += [
+        path('400', views.bad_request, {'exception': 'test'}),
+        path('404', views.page_not_found, {'exception': 'test'}),
+        path('500', views.server_error),
+    ]
+
     import debug_toolbar
     urlpatterns += [
-        re_path(r'^__debug__/', include(debug_toolbar.urls)),
+        path(r'__debug__/', include(debug_toolbar.urls)),
     ]

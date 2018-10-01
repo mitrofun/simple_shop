@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static thumbnail %}
+
+{% block title %}Not Found{% endblock title %}
+
+{% block content %}
+  <div class="col-lg-12">
+    <div class="my-4">
+      <div class="error">
+        <h1>Not Found</h1>
+        <div>The requested URL <mark>{{ request_path }}</mark> was not found on this server.</div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
