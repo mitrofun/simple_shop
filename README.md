@@ -70,6 +70,14 @@ mkdir -p media/products && cp -rf fixtures/products media
 python3 manage.py loaddata fixtures/category.json
 ```
 
+### Custom commands
+####createdefaultuser
+Run command
+```bash
+python3 manage.py createdefaultuser
+```
+create user **admin** with admin permission and simple password **admin**
+
 ### Quick run
 The project has a quick start script that does all the operations described above.
 To run it, run the following command
