@@ -1,6 +1,6 @@
 Simple shop
 =====
-Example of a store with a catalog and shopping car
+Example of a store with a catalog and shopping cart
 
 [![Build Status](https://travis-ci.com/mitrofun/simple_shop.svg?branch=master)](https://travis-ci.com/mitrofun/simple_shop)
 
