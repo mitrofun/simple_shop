@@ -71,7 +71,7 @@ python3 manage.py loaddata fixtures/category.json
 ```
 
 ### Custom commands
-####createdefaultuser
+#### createdefaultuser
 Run command
 ```bash
 python3 manage.py createdefaultuser
