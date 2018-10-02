@@ -2,4 +2,5 @@ from .cart import Cart
 
 
 def cart(request):
-    return {'cart': Cart(request)}
+    session = request.session
+    return {'cart': Cart(session)}

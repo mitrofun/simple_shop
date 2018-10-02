@@ -15,7 +15,7 @@
       {% for product in products %}
         <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
-          <a href="{{ product.get_absolute_url }}">
+          <a href="{% url 'category:product-detail' product.slug %}">
             {% thumbnail product.image "700x400" as im %}
               <img class="card-img-top" src="{{ im.url }}">
             {% empty %}
@@ -24,7 +24,7 @@
           </a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+              <a href="{% url 'category:product-detail' product.slug %}">{{ product.name }}</a>
             </h4>
             <h5>{{ product.price }} руб.</h5>
             <p class="card-text">{{ product.description | truncatechars:62 }}</p>

@@ -1,5 +1,4 @@
 from django.db import models
-from django.urls import reverse
 
 from sorl.thumbnail import ImageField
 
@@ -17,9 +16,6 @@ class Category(mixins.NameSlugMixin):
 
     def __str__(self):
         return self.name
-
-    def get_absolute_url(self):
-        return reverse('category:category-detail', args=(self.slug,))
 
 
 class Product(mixins.NameSlugMixin, mixins.UpdateCreateMixin):
@@ -50,6 +46,3 @@ class Product(mixins.NameSlugMixin, mixins.UpdateCreateMixin):
         ]
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
-
-    def get_absolute_url(self):
-        return reverse('category:product-detail', args=(self.slug,))

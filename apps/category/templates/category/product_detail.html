@@ -7,7 +7,7 @@
 {% block content %}
   <div class="col-lg-3">
     <h1 class="my-4">{% shop_name %}</h1>
-    {% menu_categories product.category.slug %}
+    {% menu_categories product.category__slug %}
   </div>
 
   <div class="col-lg-9">
@@ -22,7 +22,7 @@
         <h4>{{ product.price }} руб.</h4>
         <p class="card-text">{{ product.description }}</p>
         <hr/>
-        <form action="{% url 'cart:product-add' product.id %}" method="post" class="form-inline float-right">
+        <form action="{% url 'cart:product-add' product.pk %}" method="post" class="form-inline float-right">
           {{ cart_product_form }}
           {% csrf_token %}
           <input type="submit" class="btn btn-success ml-1" value="Добавить в корзину">

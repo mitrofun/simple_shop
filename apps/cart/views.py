@@ -12,7 +12,7 @@ class CartDetail(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(CartDetail, self).get_context_data(**kwargs)
-        cart = Cart(self.request)
+        cart = Cart(self.request.session)
         context['page_title'] = 'Корзина'
         for item in cart:
             item['update_quantity_form'] = forms.CartAddProductForm(
@@ -28,7 +28,7 @@ class ProductAddInCartView(FormView):
     success_url = reverse_lazy('cart:detail')
 
     def form_valid(self, form):
-        cart = Cart(self.request)
+        cart = Cart(self.request.session)
         product = get_object_or_404(Product, pk=self.kwargs.get('product_id'))
         quantity = form.cleaned_data['quantity']
         update = form.cleaned_data['update']
@@ -40,7 +40,7 @@ class ProductDeleteInCartView(RedirectView):
     pattern_name = 'cart:detail'
 
     def get_redirect_url(self, *args, **kwargs):
-        cart = Cart(self.request)
+        cart = Cart(self.request.session)
         product = get_object_or_404(Product, pk=kwargs['product_id'])
         cart.remove(product)
         kwargs.clear()

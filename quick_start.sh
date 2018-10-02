@@ -7,8 +7,10 @@ gulp copy
 echo 'Copy media files'
 mkdir -p media/products && cp -rf fixtures/products media
 make migrate
+python3 manage.py createcachetable
 make loaddata
 make user
 make run
+
 
 open http://localhost:8000

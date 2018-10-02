@@ -11,7 +11,13 @@ class ProductListView(ListView):
     context_object_name = 'products'
 
     def get_queryset(self):
-        queryset = super(ProductListView, self).get_queryset()
+        queryset = super(ProductListView, self).get_queryset().values(
+            'name',
+            'slug',
+            'image',
+            'description',
+            'price',
+        )
         if 'category_slug' in self.kwargs:
             queryset = queryset.filter(
                 category__slug=self.kwargs['category_slug']
@@ -26,11 +32,20 @@ class ProductListView(ListView):
 
 class ProductDetailView(DetailView):
     model = models.Product
-    queryset = models.Product.available_objects.all()
+    queryset = models.Product.available_objects.all().values(
+        'pk',
+        'name',
+        'slug',
+        'category__slug',
+        'image',
+        'description',
+        'price',
+    )
     template_name = 'category/product_detail.html'
     context_object_name = 'product'
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        # import ipdb;ipdb.set_trace()
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['cart_product_form'] = forms.CartAddProductForm
         return context
